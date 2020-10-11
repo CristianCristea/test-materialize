@@ -1,0 +1,9 @@
+<% flash.each do |message_type, message| %>
+  <% bgColorClass = message_type == 'notice' ? "bg-info" : "bg-warning" %>
+
+  <%= javascript_tag "M.toast({
+  html: '#{message}',
+  displayLength: 2000,
+  classes: '#{bgColorClass}'
+  })" %>
+<% end %>

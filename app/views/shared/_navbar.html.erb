@@ -1,0 +1,39 @@
+<%# Shows on desktop, min 990px %>
+<nav>
+  <div class="nav-wrapper">
+    <%= link_to "Logo", root_path, class: "brand-logo" %>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <% if user_signed_in? %>
+        <li><%= link_to "Sass", "#" %></li>
+        <li><%= link_to "Components", "#" %></li>
+        <li><%= link_to "Javascript", "#" %></li>
+        <li><%= link_to "Mobile", "#" %></li>
+        <li>
+          <%= link_to "Log out",
+              destroy_user_session_path,
+              method: :delete %>
+        </li>
+      <% else %>
+        <li><%= link_to "Login", new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
+<%# Shows on mobile, max 990px %>
+<ul class="sidenav" id="mobile-demo">
+  <% if user_signed_in? %>
+    <li><%= link_to "Sass", "#" %></li>
+    <li><%= link_to "Components", "#" %></li>
+    <li><%= link_to "Javascript", "#" %></li>
+    <li><%= link_to "Mobile", "#" %></li>
+    <li>
+      <%= link_to "Log out",
+          destroy_user_session_path,
+          method: :delete %>
+    </li>
+  <% else %>
+    <li><%= link_to "Login", new_user_session_path %></li>
+  <% end %>
+</ul>
