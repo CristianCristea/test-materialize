@@ -25,9 +25,18 @@ import 'materialize-css/dist/js/materialize'
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  M.AutoInit();
 
   // navbar, enable hamburger menu on mobile
-  const elems = document.querySelectorAll('.sidenav');
+  // const sidenavs = document.querySelectorAll('.sidenav');
   // takes a second arg options
-  M.Sidenav.init(elems);
+  // M.Sidenav.init(sidenavs);
+
+  // var modals = document.querySelectorAll('.modal');
+  // var instances = M.Modal.init(modals, {
+  //      dismissable: true
+  //  });
+
+  // var collapsibles = document.querySelectorAll('.collapsible');
+  // var instances = M.Collapsible.init(collapsibles);
 });
