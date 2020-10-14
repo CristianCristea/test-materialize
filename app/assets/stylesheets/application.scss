@@ -1,11 +1,12 @@
 // Graphical variables
-@import "config/fonts";
+// @import "config/fonts";
 @import "config/colors";
-@import "config/variables";
-@import "config/helpers";
+// @import "config/variables";
+// @import "config/helpers";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 // External libraries
-@import "materialize-css/dist/css/materialize";
+@import "materialize-css/sass/materialize";
 
 // Your CSS partials
 @import "components/index";
